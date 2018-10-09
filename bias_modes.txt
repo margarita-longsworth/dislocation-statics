@@ -1,0 +1,9 @@
+0 unbiased
+1 changing kappa
+2 changing kappa - tandem
+3 fixed kappa
+4 fixed kappa - tandem
+5 bell algorithm
+6 bell algorithm - tandem
+7 Pure local moves
+8 Mono

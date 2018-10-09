@@ -1,0 +1,49 @@
+#param file for Monte Carlo simulation
+#The units are angstrom, eV and amu for the mass 
+mc_Cpudim		1 1 1
+mc_Steps		4
+mc_Seed			1
+mc_totalTypes		9
+mc_realTypes		3
+  
+mc_SimboxX 2.5000000000000000e+02 0.0000000000000000e+00 0.0000000000000000e+00    
+mc_SimboxY 0.0000000000000000e+00 2.5000000000000000e+02 0.0000000000000000e+00    
+mc_SimboxZ 0.0000000000000000e+00 0.0000000000000000e+00 6.9291499999999999e+01    
+
+mc_zoneSize		40 40 20 
+mc_pbc			0 0 1 
+mc_temperature		0
+mc_sphereRadius		20
+mc_sphereWall		5.76923
+mc_cohesiveEnergy	-5.56472
+mc_flushInterval	1000
+mc_MasterFlag		1
+mc_inputFile		FeC_250x250x70_Disc_0.01wt.chkpt 
+mc_outputFile		Simu_MC_output_4.chkpt
+mc_statFile		simStat_new_4.txt
+mc_sphereParam		localMD.param
+ 
+# 1- RANDOM SINGLE TRIAL MOVE, 2- SWAP TRIAL MOVE 3 CLUSTER TRIAL MOVE
+mc_trialMoveType	2
+ 
+# 1 - start New ,Otherwise start from intermediate configuration
+mc_simulationID		1
+ 
+# Statistical counters for SWAP type trial move (not required if mc_simulationID=1 or mc_trialMoveType=1)
+mc_nConflicts		0
+mc_nFinished		0
+mc_nSwaps		0
+mc_nAccepSwaps		0
+mc_nRejeSwaps		0
+mc_totDeltaEpot		0
+mc_biasedMovesPerformed	0
+mc_localMovesPerformed	0
+ 
+# Biased sampling 
+mc_samplingMode			2
+mc_stepsInBiasedBlock		2000
+mc_stepsInLocalBlock		4000
+mc_sphereRadiusTarget		20
+mc_localMovesRadius		10
+mc_cylinderRadius		125	#Just used in mono -> mc_samplingMode==8
+mc_coveringTimes		40

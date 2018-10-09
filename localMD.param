@@ -1,0 +1,111 @@
+#ensemble	nvt 	#finite temperature lib
+ensemble	glok	#zero temperature lib	
+
+core_potential_file     ./Veiga_FeCpl/phi_Veiga_FeCpl
+atomic_e-density_file   ./Veiga_FeCpl/rho_Veiga_FeCpl
+embedding_energy_file   ./Veiga_FeCpl/Femb_Veiga_FeCpl
+
+maxsteps      15000
+#maxsteps      150
+total_types	27
+ntypes        3
+
+#box_x 	6.9994900000000001e+01 0.0000000000000000e+00 0.0000000000000000e+00 #No defect
+#box_y 	0.0000000000000000e+00 6.8699700000000007e+01 0.0000000000000000e+00
+#box_z 	0.0000000000000000e+00 0.0000000000000000e+00 6.9291499999999999e+01
+box_x 	2.5198200000000000e+02 0.0000000000000000e+00 0.0000000000000000e+00 #Small system
+box_y 	0.0000000000000000e+00 2.5055199999999999e+02 0.0000000000000000e+00
+box_z 	0.0000000000000000e+00 0.0000000000000000e+00 6.9291499999999999e+01
+#box_x            4.8000000000000000e+02 0.0000000000000000e+00 0.0000000000000000e+00 #Big system
+#box_y            0.0000000000000000e+00 4.8000000000000000e+02 0.0000000000000000e+00
+#box_z            0.0000000000000000e+00 0.0000000000000000e+00 6.9291499999999999e+01
+#box_x 251.982 0 0 
+#box_y 0 250.552 0 
+#box_z 0 0 69.2915
+
+box_from_header 0
+# consistent with Computational domain
+pbc_dirs	0 0 1
+eng_int	12
+checkpt_int	1000
+timestep	0.001
+nbl_size 1.2
+
+# placeholders update frequency
+ph_frequency 1
+
+# Thermostat variables
+# 0.11605K
+#starttemp 0.02585 
+
+starttemp 0.000        
+
+
+#placeholders
+starttemp_ph       0.0001
+
+
+realvector 0 1
+realvector 1 1
+realvector 2 0
+realvector 3 1
+realvector 4 1
+realvector 5 0
+realvector 6 1
+realvector 7 1
+realvector 8 0
+
+realvector 9  1
+realvector 10 1
+realvector 11 0
+realvector 12 1
+realvector 13 1
+realvector 14 0
+realvector 15 1
+realvector 16 1
+realvector 17 0
+
+realvector 18 1
+realvector 19 1
+realvector 20 0
+realvector 21 1
+realvector 22 1
+realvector 23 0
+realvector 24 1
+realvector 25 1
+realvector 26 0
+
+
+restrictionvector 0 1 1 1
+restrictionvector 1 1 1 1
+restrictionvector 2 1 1 1
+restrictionvector 3 0 0 0
+restrictionvector 4 0 0 0
+restrictionvector 5 0 0 0
+restrictionvector 6 0 0 0
+restrictionvector 7 0 0 0
+restrictionvector 8 0 0 0
+
+restrictionvector 9 0 0 0
+restrictionvector 10 0 0 0
+restrictionvector 11 0 0 0
+restrictionvector 12 0 0 0
+restrictionvector 13 0 0 0
+restrictionvector 14 0 0 0
+restrictionvector 15 0 0 0
+restrictionvector 16 0 0 0
+restrictionvector 17 0 0 0
+
+restrictionvector 18 0 0 0
+restrictionvector 19 0 0 0
+restrictionvector 20 0 0 0
+restrictionvector 21 0 0 0
+restrictionvector 22 0 0 0
+restrictionvector 23 0 0 0
+restrictionvector 24 0 0 0
+restrictionvector 25 0 0 0
+restrictionvector 26 0 0 0
+
+fnorm_threshold	1e-4
+#delta_epot_threshold    1e-9
+
